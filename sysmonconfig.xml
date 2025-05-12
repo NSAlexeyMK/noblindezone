@@ -1,0 +1,10 @@
+<Sysmon schemaversion="4.50">
+    <HashAlgorithms>md5,sha256</HashAlgorithms>
+    <EventFiltering>
+        <RuleGroup name="" groupRelation="or">
+            <ProcessCreate onmatch="include">
+                <Image condition="is">C:\Windows\System32\notepad.exe</Image>
+            </ProcessCreate>
+        </RuleGroup>
+    </EventFiltering>
+</Sysmon>
